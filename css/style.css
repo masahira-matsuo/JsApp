@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+@import url(/css/sanitize.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans Japanese', serif;
+  font-size: 1.2rem;
+  width: 640px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #EEEEEE;
+  border: solid 1px #ccc;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a:active {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+#orderWrap {
+  display:flex;
+  margin-bottom: 10px;
+}
+.orderInfo {  width: 70%; }
+.totalScore {
+  background-color: rgb(226, 226, 226);
+  width: 30%;
+  padding:10px;
+}
+
+.order, .score {
+  display:flex;
+  width:100%;
+  padding: 0;
+  margin: 0;
+}
+.order { height:160px; }
+.score { height:50px; }
+.order li, .score li {
+  background-color: rgb(226, 226, 226);
+  width: 20%;
+  border: solid 1px #ccc;
+  list-style: none;
+  font-size: 160%;
+  writing-mode: vertical-rl;
+  position: relative;
+}
+.order li span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
