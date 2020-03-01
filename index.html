@@ -17,7 +17,7 @@
     <meta name="robots" content="noarchive">
     
     <link rel="shortcut icon" href="/img/favicon.ico"> 
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
   
@@ -34,13 +34,15 @@
       </div>
     </div>
     <ul class="order">
-      <li><span>先方</span></li>
-      <li><span>次鋒</span></li>
-      <li><span>中堅</span></li>
-      <li><span>副将</span></li>
-      <li><span>大将</span></li>
+      <li class="teamColor colorR">&nbsp;</li>
+      <li><a id="od0" value="先方" onclick="getId(this);">先方</a></li>
+      <li><a id="od1" value="次鋒" onclick="getId(this);">次鋒</a></li>
+      <li><a id="od2" value="中堅" onclick="getId(this);">中堅</a></li>
+      <li><a id="od3" value="副将" onclick="getId(this);">副将</a></li>
+      <li><a id="od4" value="大将" onclick="getId(this);">大将</a></li>
     </ul>
     <ul class="score">
+      <li class="teamColor colorR">&nbsp;</li>
       <li></li>
       <li></li>
       <li></li>
@@ -48,6 +50,7 @@
       <li></li>
     </ul>
     <ul class="score">
+      <li class="teamColor colorW">&nbsp;</li>
       <li></li>
       <li></li>
       <li></li>
@@ -55,12 +58,29 @@
       <li></li>
     </ul>
     <ul class="order">
-      <li><span>先方</span></li>
-      <li><span>次鋒</span></li>
-      <li><span>中堅</span></li>
-      <li><span>副将</span></li>
-      <li><span>大将</span></li>
+      <li class="teamColor colorW">&nbsp;</li>
+      <li><a id="od5" value="先方" onclick="getId(this);">先方</a></li>
+      <li><a id="od6" value="次鋒" onclick="getId(this);">次鋒</a></li>
+      <li><a id="od7" value="中堅" onclick="getId(this);">中堅</a></li>
+      <li><a id="od8" value="副将" onclick="getId(this);">副将</a></li>
+      <li><a id="od9" value="大将" onclick="getId(this);">大将</a></li>
     </ul>
 
+<!--モーダル-->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1>hello</h1>
+          <p>名前を登録してください。</p>
+          <form>
+            <input id="orderInput" type="text" value="hogehoge">
+            <input id="orderRegister" type="button" value="登録">
+          </form>
+          <a id="closeBtn" value="close">閉じる</a>
+        </div>
+      </div>
+    </div>
+
   </body>
+  <script src="js/app.js"></script>
 </html>

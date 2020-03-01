@@ -1,6 +1,4 @@
 @charset "UTF-8";
-
-@import url(/css/sanitize.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 html {
@@ -52,11 +50,55 @@ a:link, a:visited, a:hover, a:active {
   writing-mode: vertical-rl;
   position: relative;
 }
-.order li span {
+.order li a {
+  display:block;
   position: absolute;
   top: 50%;
   left: 50%;
+  padding:5%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+ul .teamColor { width: 10px; }
+ul .colorR { background-color: brown;}
+ul .colorW { background-color: white;}
+
+/*モーダルウィンドウ*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  }
+  .modal-content{
+  background-color: white;
+  width: 500px;
+  margin: 20px auto;
+  padding: 10px 30px;
+  position: relative;
+  }
+#closeBtn {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  border: cadetblue solid 1px;
+  background-color: white;
+  border-radius: 6px;
+  width: 60px;
+  text-align: center;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#orderRegister{
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: chocolate;
 }
