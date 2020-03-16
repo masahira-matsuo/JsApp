@@ -20,12 +20,18 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-  
+  <div id='wrap'></div>
     <h1>オーダー記録</h1>
     <div id="orderWrap">
       <div class="orderInfo">
         <h2>大会名<span>日付</span></h2>
         <h3>チーム名</h3>
+        <a id="theams" onclick="getId(this);">
+          <ul>
+            <li>赤&nbsp;|&nbsp;<span id="theamRed" value="名称未設定"></span></li>
+            <li>白&nbsp;|&nbsp;<span id="theamWhite" value="名称未設定"></span></li>
+          </ul>
+        </a>
       </div>
       <div class="totalScore">
         <p>勝者数：</p>
@@ -35,11 +41,11 @@
     </div>
     <ul class="order">
       <li class="teamColor colorR">&nbsp;</li>
-      <li><a id="od0" value="先方" onclick="getId(this);">先方</a></li>
-      <li><a id="od1" value="次鋒" onclick="getId(this);">次鋒</a></li>
-      <li><a id="od2" value="中堅" onclick="getId(this);">中堅</a></li>
-      <li><a id="od3" value="副将" onclick="getId(this);">副将</a></li>
-      <li><a id="od4" value="大将" onclick="getId(this);">大将</a></li>
+      <li><a id="oder0" value="先方" onclick="getId(this);">先方</a></li>
+      <li><a id="oder1" value="次鋒" onclick="getId(this);">次鋒</a></li>
+      <li><a id="oder2" value="中堅" onclick="getId(this);">中堅</a></li>
+      <li><a id="oder3" value="副将" onclick="getId(this);">副将</a></li>
+      <li><a id="oder4" value="大将" onclick="getId(this);">大将</a></li>
     </ul>
     <ul class="score">
       <li class="teamColor colorR">&nbsp;</li>
@@ -59,24 +65,18 @@
     </ul>
     <ul class="order">
       <li class="teamColor colorW">&nbsp;</li>
-      <li><a id="od5" value="先方" onclick="getId(this);">先方</a></li>
-      <li><a id="od6" value="次鋒" onclick="getId(this);">次鋒</a></li>
-      <li><a id="od7" value="中堅" onclick="getId(this);">中堅</a></li>
-      <li><a id="od8" value="副将" onclick="getId(this);">副将</a></li>
-      <li><a id="od9" value="大将" onclick="getId(this);">大将</a></li>
+      <li><a id="oder5" value="先方" onclick="getId(this);">先方</a></li>
+      <li><a id="oder6" value="次鋒" onclick="getId(this);">次鋒</a></li>
+      <li><a id="oder7" value="中堅" onclick="getId(this);">中堅</a></li>
+      <li><a id="oder8" value="副将" onclick="getId(this);">副将</a></li>
+      <li><a id="oder9" value="大将" onclick="getId(this);">大将</a></li>
     </ul>
 
-<!--モーダル-->
+<!--編集モーダル-->
     <div id="modal" class="modal">
       <div class="modal-content">
-        <div class="modal-body">
-          <h1>hello</h1>
-          <p>名前を登録してください。</p>
-          <form>
-            <input id="orderInput" type="text" value="hogehoge">
-            <input id="orderRegister" type="button" value="登録">
-          </form>
-          <a id="closeBtn" value="close">閉じる</a>
+        <div id="modal-body">
+          <!-- <input id="orderInput" type="text" value=""> -->
         </div>
       </div>
     </div>
